@@ -1,0 +1,199 @@
+/* общие стили для всех страниц */
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --second-background-color: #f5f4fa;
+  --second-text-color: #ffffff;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  background-color: #ffffff;
+}
+/* стиль для линков */
+.link {
+  text-decoration: none;
+  color: var(--title-text-color);
+}
+/* стили для списков */
+.list {
+  list-style: none;
+}
+
+/* логотип WebStudio*/
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+.logo:hover,
+.logo:focus {
+  color: var(--accent-color);
+}
+.logo-web {
+  color: #2196f3;
+}
+
+/* стили для хедера----header */
+/* site-navig */
+.site-navig {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  cursor: pointer;
+}
+.site-navig :hover,
+.site-navig :focus {
+  color: var(--accent-color);
+}
+.auth-navig .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+.auth-navig .link:hover,
+.auth-navig .link:focus {
+  color: var(--accent-color);
+}
+.site-navig .link.current {
+  color: var(--accent-color);
+}
+
+/* стили для main страницы студио */
+
+/* hero */
+.hero {
+  background-color: #2f303a;
+  color: var(--second-text-color);
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+/* кнопка заказать услугу */
+.button-hero {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--second-text-color);
+  cursor: pointer;
+}
+.button-hero:hover,
+.button-hero:focus {
+  background-color: #188ce8;
+  color: var(--second-text-color);
+}
+.sections-title-second {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+
+.sections-title-feature {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+}
+.sections-title-team {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.sections-team p {
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* футер */
+.footer {
+  background-color: #2f303a;
+}
+/* логотип ф футере */
+.logo-footer {
+  color: var(--second-text-color);
+}
+
+/* адресс ссылка  */
+address {
+  font-style: normal;
+}
+.adress-link {
+  color: var(--second-background-color);
+}
+.adress-link:hover,
+.adress-link:focus {
+  color: var(--accent-color);
+}
+/* ауторизация в футере */
+.footer-navig .link {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-navig .link:hover,
+.footer-navig .link:focus {
+  color: var(--accent-color);
+}
+
+/* стили для страницы портфолио */
+.filters-button button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  background-color: var(--second-background-color);
+  cursor: pointer;
+}
+.filters-button .link.current,
+.filters-button button:hover,
+.filters-button button:focus {
+  background-color: var(--accent-color);
+  color: var(--second-text-color);
+}
+.project-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+}
+.project p {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}
