@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 /* общие стили для всех страниц */
 :root {
   --primary-text-color: #757575;
@@ -7,7 +17,7 @@
   --second-text-color: #ffffff;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -15,19 +25,51 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   background-color: #ffffff;
+  margin: 0;
 }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+/* стили скрытого заголовка */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 /* стиль для линков */
 .link {
   text-decoration: none;
   color: var(--title-text-color);
 }
+
 /* стили для списков */
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* логотип WebStudio*/
 .logo {
+  display: inline-block;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -35,7 +77,11 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #000000;
+  margin-top: 24px;
+  margin-bottom: 25px;
+  margin-right: 93px;
 }
+
 .logo:hover,
 .logo:focus {
   color: var(--accent-color);
@@ -43,28 +89,65 @@ body {
 .logo-web {
   color: #2196f3;
 }
-
+.logo .link {
+}
 /* стили для хедера----header */
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+}
+.navig {
+  display: flex;
+}
+
 /* site-navig */
 .site-navig {
+  display: flex;
+}
+
+.site-item .link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   cursor: pointer;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 .site-navig :hover,
 .site-navig :focus {
   color: var(--accent-color);
 }
+
+.site-item:not(:last-child) {
+  margin-right: 50px;
+}
+.auth-navig {
+  display: flex;
+  margin-left: auto;
+}
 .auth-navig .link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   cursor: pointer;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-left: auto;
+
+  /* background-color: rgba(218, 233, 16, 0.918); */
+}
+.auth-item:not(:last-child) {
+  margin-right: 50px;
 }
 .auth-navig .link:hover,
 .auth-navig .link:focus {
@@ -73,6 +156,15 @@ body {
 .site-navig .link.current {
   color: var(--accent-color);
 }
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* outline: 2px solid tomato; */
+  /* background-color: rgba(234, 188, 243, 0.6); */
+}
 
 /* стили для main страницы студио */
 
@@ -80,6 +172,9 @@ body {
 .hero {
   background-color: #2f303a;
   color: var(--second-text-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   font-weight: 900;
@@ -88,6 +183,8 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: 30px;
+  min-width: 696px;
 }
 /* кнопка заказать услугу */
 .button-hero {
@@ -101,12 +198,34 @@ body {
   background-color: var(--accent-color);
   color: var(--second-text-color);
   cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin: auto;
 }
 .button-hero:hover,
 .button-hero:focus {
   background-color: #188ce8;
   color: var(--second-text-color);
 }
+
+/* sections */
+
+.sections,
+.sections-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.feature-list {
+  display: flex;
+  margin-bottom: 94px;
+}
+.feature-item {
+  margin-right: 30px;
+}
+/* заголовки второго уровня */
 .sections-title-second {
   font-weight: 700;
   font-size: 36px;
@@ -114,8 +233,19 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+  margin-bottom: 50px;
 }
 
+.work-list {
+  display: flex;
+  justify-content: space-between;
+}
+.team-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 94px;
+}
+/* заголовки в  секции особенности */
 .sections-title-feature {
   font-weight: 700;
   font-size: 14px;
@@ -124,6 +254,10 @@ body {
   text-transform: uppercase;
   color: var(--title-text-color);
 }
+.sections p {
+  margin-top: 10px;
+}
+/* подзаголовки под фото секции наша комаанда  */
 .sections-title-team {
   font-weight: 500;
   font-size: 16px;
@@ -131,28 +265,46 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+  margin-top: 30px;
 }
 .sections-team p {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-top: 10px;
 }
 
 /* футер */
 .footer {
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 /* логотип ф футере */
 .logo-footer {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
   color: var(--second-text-color);
+}
+
+.logo-footer:hover,
+.logo-footer:focus {
+  color: var(--accent-color);
 }
 
 /* адресс ссылка  */
 address {
   font-style: normal;
+  margin-top: 20px;
 }
 .adress-link {
+  display: block;
   color: var(--second-background-color);
 }
 .adress-link:hover,
@@ -160,8 +312,9 @@ address {
   color: var(--accent-color);
 }
 /* ауторизация в футере */
-.footer-navig .link {
+.footer-navig-link {
   color: rgba(255, 255, 255, 0.6);
+  margin-top: 9px;
 }
 .footer-navig .link:hover,
 .footer-navig .link:focus {
