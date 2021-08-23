@@ -18,7 +18,7 @@ html {
   --second-text-color: #ffffff;
 }
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -93,8 +93,8 @@ img {
 .logo-web {
   color: #2196f3;
 }
-.logo .link {
-}
+/* .logo .link { */
+/* } */
 /* стили для хедера----header */
 
 .header {
@@ -192,7 +192,8 @@ img {
 }
 /* кнопка заказать услугу */
 .button-hero {
-  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
   display: flex;
@@ -247,12 +248,12 @@ img {
 .sections-title-feature {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
 }
-.sections p {
+.feature-item p {
   margin-top: 10px;
 }
 /* секция чем мы занимаемся */
@@ -301,7 +302,7 @@ img {
 .team-card {
   width: 270px;
   background-color: var(--background-color);
-  border-bottom: ;
+  border-bottom: 0;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -361,15 +362,15 @@ address {
 /* стили для страницы портфолио */
 /* секция меню */
 .sections-title {
-  margin-top: 94px;
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .filters-button {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
-.filters-button button {
+.filters-item button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -380,17 +381,23 @@ address {
   cursor: pointer;
   border: 0;
   border-radius: 4px;
+  padding: 6px 22px;
 }
-.filters-button .link.current,
-.filters-button button:hover,
-.filters-button button:focus {
+
+.filters-item button:hover,
+.filters-item button:focus {
   background-color: var(--accent-color);
   color: var(--second-text-color);
 }
-
-.filters-item {
-  background-color: var(--second-background-color);
+.filters-item .current {
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+}
+.filters-item {
+  border-radius: 4px;
+  background-color: var(--second-background-color);
 }
 
 .filters-button .filters-item + .filters-item {
